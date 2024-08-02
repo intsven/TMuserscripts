@@ -3,7 +3,7 @@
 // @author           intsven
 // @description      Display speed of RTIRL streamers
 // @version          0.1
-// @include          https://rtirl.com/*
+// @match          https://rtirl.com/*
 // @run-at           document-start
 // @grant            none
 // ==/UserScript==
