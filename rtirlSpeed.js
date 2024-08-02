@@ -8,6 +8,7 @@
 // @run-at           document-start
 // @downloadURL      https://github.com/intsven/TMuserscripts/raw/main/rtirlSpeed.js
 // @updateURL        https://github.com/intsven/TMuserscripts/raw/main/rtirlSpeed.js
+// @license          MIT
 // @grant            none
 // ==/UserScript==
 
