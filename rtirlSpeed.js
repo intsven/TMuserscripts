@@ -2,7 +2,7 @@
 // @name             RTIRL Speed Display
 // @author           intsven
 // @namespace        intsven
-// @description      Display speed of RTIRL streamers
+// @description      Display speed of streamers on rtirl.com
 // @version          0.1
 // @match          https://rtirl.com/*
 // @run-at           document-start
