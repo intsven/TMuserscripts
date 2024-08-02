@@ -1,10 +1,13 @@
 // ==UserScript==
 // @name             RTIRL Speed Display
 // @author           intsven
+// @namespace        intsven
 // @description      Display speed of RTIRL streamers
 // @version          0.1
 // @match          https://rtirl.com/*
 // @run-at           document-start
+// @downloadURL      https://github.com/intsven/TMuserscripts/raw/main/rtirlSpeed.js
+// @updateURL        https://github.com/intsven/TMuserscripts/raw/main/rtirlSpeed.js
 // @grant            none
 // ==/UserScript==
 
