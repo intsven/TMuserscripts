@@ -3,7 +3,7 @@
 // @author           intsven
 // @namespace        intsven
 // @description      Theater mode for x.com
-// @version          0.1
+// @version          0.2
 // @match            https://x.com/i/broadcasts/*
 // @run-at           document-start
 // @downloadURL      https://github.com/intsven/TMuserscripts/raw/main/xLiveTheater.js
@@ -29,7 +29,7 @@
             });
     
             // If you get "parameter 1 is not of type 'Node'" error, see https://stackoverflow.com/a/77855838/492336
-            observer.observe(document.body, {
+            observer.observe(document.documentElement, {
                 childList: true,
                 subtree: true
             });
@@ -62,15 +62,27 @@
         if (div) {
             div.style.width = '1450px';
         }
+        // Get div with aria-label="Trending"
+        const trending = document.querySelector('div[aria-label="Trending"]');
+        // Get child div of trending
+        const trendingChild = trending?.querySelector('div');
+        if (trendingChild) {
+            trendingChild.style.height = 'calc(-70px + 100dvh)';
+        }
     };
 
     let removedHeader = false;
     // Wait until <button> with aria-label="Share Menu" is found
     waitForElm('button[aria-label="Share Menu"]').then((button) => {
+        // Check if button already exists
+        if (button.previousElementSibling?.innerText === 'THEATER') {
+            return;
+        }
         // Get div parent of button
         const parent = button.parentElement;
         // Create new button
         const newButton = document.createElement('button');
+        newButton.setAttribute('aria-label', 'Theater mode');
         // Set inner text of new button
         newButton.innerText = 'THEATER';
         // Add click event listener to new button
